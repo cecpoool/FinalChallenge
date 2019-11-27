@@ -26,15 +26,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Game[0].TimeOfDate)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Game[0].Paid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Game[0].Payer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Game[0].CourtFees)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -53,15 +45,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TimeOfDate)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Paid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Payer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CourtFees)
-            </td>
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

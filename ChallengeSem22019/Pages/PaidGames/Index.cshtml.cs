@@ -29,7 +29,9 @@ namespace ChallengeSem22019.Pages.PaidGames
                 case ViewType.Paid:
                     Game = await _context.Games
                         .Where(g => g.Paid == true)
-                        .ToListAsync();
+                        .OrderBy(g => g.Payer)
+                        .ToListAsync()
+                        ;
                     break;
                 default:
                     Game = await _context.Games.ToListAsync();

@@ -32,14 +32,18 @@ namespace ChallengeSem22019
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddRazorPages();
-                                //.AddRazorPagesOptions(options =>
-                                //{
-                                //    options.Conventions.AuthorizePage("/CoffeeDates/edit");
-                                //    options.Conventions.AuthorizePage("/CoffeeDates/delete");
-                                //    options.Conventions.AllowAnonymousToPage("/CoffeeDates/index");
-                                //    options.Conventions.AllowAnonymousToPage("/CoffeeDates/details");
-                                //});
+            services.AddRazorPages()
+                                .AddRazorPagesOptions(options =>
+                                {
+                                    options.Conventions.AuthorizePage("/Games/edit");
+                                    options.Conventions.AuthorizePage("/FutureGames/edit");
+                                    options.Conventions.AuthorizePage("/Games/delete");
+                                    options.Conventions.AuthorizePage("/FutureGames/delete");
+                                    options.Conventions.AuthorizeFolder("/PaidGames");
+                                    options.Conventions.AuthorizeFolder("/UnpaidGames");
+                                    options.Conventions.AuthorizeFolder("/PastGames");
+
+                                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

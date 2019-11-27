@@ -1,0 +1,65 @@
+﻿@page
+@model ChallengeSem22019.Pages.PaidGames.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.Team1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Team1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.Team2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Team2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.Venue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Venue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.TimeOfDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.TimeOfDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.Paid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Paid)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.Payer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Payer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.CourtFees)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.CourtFees)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Game.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

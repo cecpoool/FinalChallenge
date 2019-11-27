@@ -17,6 +17,8 @@ namespace ChallengeSem22019.Models
 
         public DateTime TimeOfDate { get; set; }
 
+        public bool Paid { get; set; }
+
         public string Payer { get; set; }
 
         public float? CourtFees { get; set; }

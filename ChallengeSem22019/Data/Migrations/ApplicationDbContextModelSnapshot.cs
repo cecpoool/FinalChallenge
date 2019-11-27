@@ -29,6 +29,9 @@ namespace ChallengeSem22019.Data.Migrations
                     b.Property<float?>("CourtFees")
                         .HasColumnType("real");
 
+                    b.Property<bool>("Paid")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Payer")
                         .HasColumnType("nvarchar(max)");
 

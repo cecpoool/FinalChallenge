@@ -33,6 +33,13 @@ namespace ChallengeSem22019
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+                                //.AddRazorPagesOptions(options =>
+                                //{
+                                //    options.Conventions.AuthorizePage("/CoffeeDates/edit");
+                                //    options.Conventions.AuthorizePage("/CoffeeDates/delete");
+                                //    options.Conventions.AllowAnonymousToPage("/CoffeeDates/index");
+                                //    options.Conventions.AllowAnonymousToPage("/CoffeeDates/details");
+                                //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
